@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class RatRenderer extends MobRenderer<RatEntity, RatModel<RatEntity>> {
     public RatRenderer(EntityRendererProvider.Context context) {
-        super(context, new RatModel<>(context.bakeLayer((RatModel.LAYER_LOCATION))), 0.25f);
+        super(context, new RatModel<>(context.bakeLayer(RatModel.LAYER_LOCATION)), 0.25f);
     }
 
     @Override

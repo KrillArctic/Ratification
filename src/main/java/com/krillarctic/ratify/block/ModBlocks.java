@@ -2,9 +2,7 @@ package com.krillarctic.ratify.block;
 
 import com.krillarctic.ratify.RatMod;
 import com.krillarctic.ratify.item.ModItems;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

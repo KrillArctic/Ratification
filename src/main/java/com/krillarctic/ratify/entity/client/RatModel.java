@@ -1,5 +1,6 @@
 package com.krillarctic.ratify.entity.client;
 
+import com.krillarctic.ratify.RatMod;
 import com.krillarctic.ratify.entity.custom.RatEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,7 +17,7 @@ import javax.swing.*;
 
 public class RatModel<T extends RatEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION =
-            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("ratificationmodification", "rat"), "main");
+            new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(RatMod.MOD_ID, "rat"), "main");
 
     private final ModelPart legs;
     private final ModelPart tail;

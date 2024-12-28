@@ -44,6 +44,7 @@ public class RatMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

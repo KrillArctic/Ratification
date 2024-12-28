@@ -15,5 +15,7 @@ public class ModItemsModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.CHEESE.get());
         basicItem(ModItems.SOULOFANINNOCENT.get());
+
+        withExistingParent(ModItems.RAT_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }
