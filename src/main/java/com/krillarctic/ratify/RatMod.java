@@ -1,6 +1,10 @@
 package com.krillarctic.ratify;
 
+import com.krillarctic.ratify.block.ModBlocks;
+import com.krillarctic.ratify.entity.ModEntities;
+import com.krillarctic.ratify.entity.client.RatRenderer;
 import com.krillarctic.ratify.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
@@ -39,6 +43,7 @@ public class RatMod
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -72,9 +77,7 @@ public class RatMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.RAT.get(), RatRenderer::new);
         }
     }
 }
